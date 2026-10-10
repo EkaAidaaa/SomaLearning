@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4fa9f5">
+  <title>SOMA Learning Activity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bar" id="bar"></div>
+  <div class="sky" aria-hidden="true">
+    <div class="sun"></div>
+    <div class="sparks" id="sparks"></div>
+    <span class="plane">✈️</span>
+    <span class="balloon">🎈</span>
+    <div class="drift" id="drift">
+      <i class="dc" style="--w:240px;top:10%;animation-duration:80s;animation-delay:-10s"></i>
+      <i class="dc" style="--w:160px;top:28%;animation-duration:60s;animation-delay:-40s"></i>
+      <i class="dc" style="--w:300px;top:48%;animation-duration:95s;animation-delay:-65s"></i>
+      <i class="dc" style="--w:190px;top:68%;animation-duration:70s;animation-delay:-25s"></i>
+      <i class="dc" style="--w:260px;top:86%;animation-duration:88s;animation-delay:-50s"></i>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <h1><span class="wel">WELCOME TO</span> <span class="soma"><b class="k-s">S</b><b class="k-o">O</b><b class="k-m">M</b><b class="k-a">A</b></span> <span class="wel">LEARNING ACTIVITY</span></h1>
+      <p class="intro">SOMA Learning (Sensing, Organizing, Moving, &amp; Articulating) merupakan media pembelajaran yang menekankan pada pembelajaran yang bernyawa dan membawa bingkai pembelajaran kurikulum Deep Learning (Mindful, Meaningful, &amp; Joyful) pada pembelajaran Bahasa Inggris. Melalui 4 sintaks SOMA, siswa terhubung dengan pembelajaran penuh makna, mereka tidak menghafal tapi memahami pola dan struktur kata-kata dalam kalimat bahasa Inggris. Mereka memahaminya melalui penumbuhan literasi makna dan juga kemampuan berpikir berjenjang berbasis SOLO Taxonomy.</p>
+      <a class="go learn" href="https://drive.google.com/file/d/1sIFBlc-EDR-pdD4p1_vaVjU2kD-fOeM4/view" target="_blank" rel="noopener">Learn More</a>
+    </section>
+
+    <section class="section">
+      <ol class="stairs" id="tangga">
+        <li class="step k-s" style="--i:0">
+          <span class="badge">S</span>
+          <div>
+            <h3>Sensing</h3>
+            <p>Mengamati dan merasakan contoh kalimat Simple Past Tense sebelum belajar aturannya.</p>
+            <a class="go" href="https://www.educaplay.com/learning-resources/30814611-soma_past_tense_sentence_builder_organizing_phase.html" target="_blank" rel="noopener">Play</a>
+          </div>
+        </li>
+        <li class="step k-o" style="--i:1">
+          <span class="badge">O</span>
+          <div>
+            <h3>Organizing</h3>
+            <p>Menyusun kata-kata menjadi kalimat Simple Past Tense yang benar.</p>
+            <a class="go" href="https://www.educaplay.com/learning-resources/30814552-past_tense_sentence_builder.html" target="_blank" rel="noopener">Play</a>
+          </div>
+        </li>
+        <li class="step k-m" style="--i:2">
+          <span class="badge">M</span>
+          <div>
+            <h3>Moving</h3>
+            <p>Kartu warna untuk kerja kelompok: kalimat positif, negatif, dan tanya.</p>
+            <button class="go" data-game="moving">Play</button>
+          </div>
+        </li>
+        <li class="step k-a" style="--i:3">
+          <span class="badge">A</span>
+          <div>
+            <h3>Articulating</h3>
+            <p>Group Storytelling: menceritakan pengalaman dengan Simple Past Tense.</p>
+            <button class="go" data-game="articulating">Play</button>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="task" class="section">
+      <div class="task-card">
+        <div class="task-ico">📁</div>
+        <div>
+          <h2>Student Task</h2>
+          <p>Tugas siswa tersedia di folder Google Drive. Klik tombol di bawah untuk membukanya.</p>
+          <a class="go" style="--c:#fff" href="https://drive.google.com/drive/folders/1tyNF0WRo-m0Mb3f_GtgBhuv5WrNzbsWp?usp=sharing" target="_blank" rel="noopener">Buka Google Drive ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="deep" class="section">
+      <h2>Bingkai Deep Learning</h2>
+      <div class="pillars">
+        <div class="pillar p1"><span class="ico">🧘</span><h3>Mindful</h3><p>Belajar dengan sadar dan penuh perhatian.</p></div>
+        <div class="pillar p2"><span class="ico">💡</span><h3>Meaningful</h3><p>Materi terhubung dengan kehidupan siswa.</p></div>
+        <div class="pillar p3"><span class="ico">🎉</span><h3>Joyful</h3><p>Proses belajar terasa menyenangkan.</p></div>
+      </div>
+    </section>
+
+    <section id="solo" class="section">
+      <h2>Tangga berpikir SOLO Taxonomy</h2>
+      <div class="solo">
+        <div class="levels" role="tablist" aria-label="Tingkat SOLO">
+          <button role="tab" class="lv" data-i="0">Prestructural</button>
+          <button role="tab" class="lv" data-i="1">Unistructural</button>
+          <button role="tab" class="lv" data-i="2">Multistructural</button>
+          <button role="tab" class="lv" data-i="3">Relational</button>
+          <button role="tab" class="lv" data-i="4">Extended Abstract</button>
+        </div>
+        <div class="solo-panel" id="solo-panel" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="game" aria-labelledby="game-title">
+    <div class="game-head"><h2 id="game-title"></h2><button class="x" id="game-close" aria-label="Tutup">&times;</button></div>
+    <div id="game-box"></div>
+  </dialog>
+
+  <footer><p>&copy; 2026 SOMA Learning Activity</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
