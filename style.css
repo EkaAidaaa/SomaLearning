@@ -164,3 +164,34 @@ dialog { max-height:92vh; max-height:92dvh; }
 
 .task-card.reflect { background:var(--mint); }
 .reflect .task-ico { animation-duration:1.8s; }
+
+/* ===== Student Task & Reflection: awan warna ===== */
+.fcloud { position:relative; isolation:isolate; width:min(640px,94%); margin:0 auto; padding:4.6rem 15% 3.2rem; text-align:center; display:flex; flex-direction:column; align-items:center; filter:drop-shadow(0 14px 18px rgba(18,38,107,.22)); animation:melayang 7s ease-in-out infinite; }
+.fcloud::before { content:""; position:absolute; inset:0; z-index:-1; background:var(--bgd) center/100% 100% no-repeat; }
+.gold { --bgd:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' preserveAspectRatio='none'%3E%3Cg fill='%23ffd75e'%3E%3Ccircle cx='150' cy='150' r='72'/%3E%3Ccircle cx='262' cy='105' r='92'/%3E%3Ccircle cx='385' cy='118' r='78'/%3E%3Ccircle cx='478' cy='160' r='68'/%3E%3Ccircle cx='95' cy='215' r='62'/%3E%3Ccircle cx='505' cy='215' r='62'/%3E%3Crect x='95' y='150' width='410' height='125' rx='60'/%3E%3Ccircle cx='200' cy='243' r='42'/%3E%3Ccircle cx='300' cy='248' r='40'/%3E%3Ccircle cx='400' cy='243' r='42'/%3E%3C/g%3E%3C/svg%3E"); }
+.mint { --bgd:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 300' preserveAspectRatio='none'%3E%3Cg fill='%2386e6c6'%3E%3Ccircle cx='150' cy='150' r='72'/%3E%3Ccircle cx='262' cy='105' r='92'/%3E%3Ccircle cx='385' cy='118' r='78'/%3E%3Ccircle cx='478' cy='160' r='68'/%3E%3Ccircle cx='95' cy='215' r='62'/%3E%3Ccircle cx='505' cy='215' r='62'/%3E%3Crect x='95' y='150' width='410' height='125' rx='60'/%3E%3Ccircle cx='200' cy='243' r='42'/%3E%3Ccircle cx='300' cy='248' r='40'/%3E%3Ccircle cx='400' cy='243' r='42'/%3E%3C/g%3E%3C/svg%3E"); animation-delay:-3s; }
+.fico { font-size:3rem; line-height:1; animation:lompat 2.6s ease-in-out infinite; }
+.fcloud h2 { background:none; padding:0; margin:.2rem 0 .4rem; font-size:1.9rem; display:block; }
+.fcloud p { margin:0 0 1rem; }
+.orb { position:absolute; z-index:2; font-size:1.8rem; animation:lompat 3s ease-in-out infinite; }
+.o1 { top:-8px; left:7%; } .o2 { top:10%; right:4%; animation-delay:-1s; } .o3 { bottom:16%; left:2%; animation-delay:-2s; }
+
+/* Kolam + katak melompat */
+.pond { position:relative; width:min(640px,94%); height:86px; margin:.6rem auto 0; border-radius:43px; overflow:hidden; background:linear-gradient(#63c5fa,#2f8fe0); border:4px solid var(--ink); box-shadow:6px 6px 0 var(--ink); }
+.pond::after { content:""; position:absolute; left:0; right:0; bottom:0; height:22px; background:radial-gradient(circle at 15px 0,transparent 9px,rgba(255,255,255,.4) 10px 12px,transparent 13px) 0 0/30px 22px repeat-x; animation:ombak 3s linear infinite; }
+.pad { position:absolute; bottom:8px; width:72px; height:26px; margin-left:-36px; border-radius:50%; background:#43c16f; border-bottom:4px solid #2a8f4e; }
+.frog { position:absolute; left:12%; bottom:26px; z-index:2; font-size:2rem; line-height:1; transform:translateX(-50%); animation:hop 7s ease-in-out infinite; }
+@keyframes ombak { to { background-position-x:30px; } }
+@keyframes hop {
+  0%,10% { left:12%; bottom:26px; } 20% { left:27%; bottom:64px; }
+  30%,45% { left:42%; bottom:26px; } 55% { left:57%; bottom:64px; }
+  65%,80% { left:72%; bottom:26px; } 90% { left:42%; bottom:70px; } 100% { left:12%; bottom:26px; }
+}
+
+@media (max-width:600px) {
+  .fcloud { padding:5rem 13% 3.4rem; }
+  .gold { --bgd:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 380' preserveAspectRatio='none'%3E%3Cg fill='%23ffd75e'%3E%3Ccircle cx='110' cy='135' r='70'/%3E%3Ccircle cx='200' cy='98' r='86'/%3E%3Ccircle cx='285' cy='135' r='66'/%3E%3Ccircle cx='62' cy='205' r='56'/%3E%3Ccircle cx='300' cy='210' r='58'/%3E%3Crect x='55' y='140' width='250' height='190' rx='70'/%3E%3Ccircle cx='110' cy='325' r='50'/%3E%3Ccircle cx='190' cy='335' r='46'/%3E%3Ccircle cx='265' cy='325' r='50'/%3E%3C/g%3E%3C/svg%3E"); }
+  .mint { --bgd:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 380' preserveAspectRatio='none'%3E%3Cg fill='%2386e6c6'%3E%3Ccircle cx='110' cy='135' r='70'/%3E%3Ccircle cx='200' cy='98' r='86'/%3E%3Ccircle cx='285' cy='135' r='66'/%3E%3Ccircle cx='62' cy='205' r='56'/%3E%3Ccircle cx='300' cy='210' r='58'/%3E%3Crect x='55' y='140' width='250' height='190' rx='70'/%3E%3Ccircle cx='110' cy='325' r='50'/%3E%3Ccircle cx='190' cy='335' r='46'/%3E%3Ccircle cx='265' cy='325' r='50'/%3E%3C/g%3E%3C/svg%3E"); }
+  .fcloud h2 { font-size:1.6rem; }
+  .pond { height:76px; }
+}
