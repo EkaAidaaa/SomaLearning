@@ -161,3 +161,6 @@ dialog { max-height:92vh; max-height:92dvh; }
 }
 
 .learn { --c:var(--sun); font-size:1.1rem; padding:.8rem 2rem; margin-top:.2rem; }
+
+.task-card.reflect { background:var(--mint); }
+.reflect .task-ico { animation-duration:1.8s; }
