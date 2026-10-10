@@ -24,7 +24,9 @@ if ("IntersectionObserver" in window) {
 const bar = document.getElementById("bar");
 addEventListener("scroll", () => {
   const h = document.documentElement;
-  bar.style.width = (scrollY / Math.max(1, h.scrollHeight - innerHeight)) * 100 + "%";
+  const p = Math.min(1, scrollY / Math.max(1, h.scrollHeight - innerHeight));
+  bar.style.width = p * 100 + "%";
+  h.style.setProperty("--p", p);
 }, { passive: true });
 
 /* ===== SOLO ===== */
@@ -116,3 +118,15 @@ document.querySelectorAll("[data-game]").forEach((c) => c.addEventListener("clic
 document.getElementById("game-close").onclick = () => dlg.close();
 dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
 dlg.addEventListener("close", () => { box.innerHTML = ""; });
+
+/* Efek bintang saat layar disentuh/diklik */
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addEventListener("pointerdown", (e) => {
+    for (let i = 0; i < 7; i++) {
+      const s = el("span", "pop", ["✨", "⭐", "💫"][i % 3]), a = (Math.PI * 2 * i) / 7, d = 40 + Math.random() * 30;
+      s.style.left = e.clientX + "px"; s.style.top = e.clientY + "px";
+      s.style.setProperty("--dx", Math.cos(a) * d + "px"); s.style.setProperty("--dy", Math.sin(a) * d + "px");
+      document.body.append(s); setTimeout(() => s.remove(), 800);
+    }
+  });
+}
